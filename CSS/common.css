@@ -1,0 +1,242 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.icomoon {
+    font-family: "icomoon";
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.style-blue {
+    color: #1d9bf0;
+}
+
+.style-black {
+    color: #0f1419;
+}
+
+.spacer {
+    margin: 8px 12px 0;
+    width: 1px;
+    height: 12px;
+    background-color: #e7e7e8;
+}
+
+/* 顶部快捷导航 */
+.shortcut {
+    height: 31px;
+    background-color: #ffffff;
+    line-height: 31px;
+}
+
+.shortcut li {
+    float: left;
+}
+.header {
+    height: 105px;
+    position: relative;
+}
+.logo  {
+    font-family:icomoon;
+    font-size: 70px;
+    
+}
+.logo :hover{
+    text-decoration: none;     color: none;
+}
+.search{
+    position: absolute;
+    top: 24px;
+    left: 335px;
+}
+.search input {
+    float: left;
+    width: 452px;
+    height: 36px;
+    padding-left: 10px;
+    border:2px solid #1d9bf0 ;
+}
+.search button {
+    float: left;
+    width: 82px;
+    height: 40px;
+    background-color: #1d9bf0;
+    border: none;
+    font-size: 16px;
+    color: #f1f1f1;
+}
+.hotwords{
+    width: 497px;
+    height: 37px;
+    position: absolute;
+    left: 335px;
+    top: 70px;
+    /* background-color: pink; */
+    float: left;
+}
+.hotwords a {
+    margin: 0 8px;
+}
+.shopcar{
+   background-color:#1d9bf0;
+    width: 125px;
+    height: 36px;
+    position: absolute;
+    top: 19px;
+    right: 64px;
+    color:#ffffff;
+    border-radius: 10px;
+}
+.car{
+    font-family:icomoon;     
+    font-size: large;     
+    color:#ffffff;
+    margin:0 5px;
+  
+}
+.arrow{
+    margin-left:5px;
+}
+.count {
+    position: absolute;
+    top: -5px;
+    left: 110px;
+    background-color:#7fc1ed;
+    height: 14px;
+    line-height:14px;
+    padding: 0 3px;
+    border-radius: 7px 7px 7px 0;
+}
+/* nav */
+.nav {
+    height: 45px;
+    border-bottom:2px solid #1d9bf0 ;
+}
+.dropdown{
+    width: 209px;
+    height: 45px;
+    color: #ffffff;
+}
+.dropdown .dt{
+    width: 100%;
+    height: 100%;
+    background-color: #1d9bf0;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+}
+.dropdown .dd{
+    color: #ffffff;
+    height: 497px;
+    background-color: #8ecdf7;
+    margin-top: 2px;
+    padding-left: 2px;
+}
+.menu_item{
+    height: 31px;
+    line-height: 31px;
+    padding: 0 5px;
+}
+.menu_item:hover{
+    background-color: #ffffff;
+}
+.menu_item a{
+    font-size: 14px;
+    color: #ffffff;
+}
+.menu_item:hover a{
+    color: #7fc1ed;
+}
+.menu_item i {
+    font-family: icomoon;
+    font-size: 10px;
+    float: right;
+}
+.navitem {
+    margin-left: 10px;
+}
+.navitem li {
+    float: left;
+}
+.navitem li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 25px;
+    font-size: 10px;
+    color: #677681;
+}
+.footer {
+    padding-top: 30px;
+    height: 420px;
+    background-color:#7fc1ed;
+
+}
+.mod_service {
+    height: 79px;
+    border-bottom: 1px solid #677681;
+}
+.mod_service_quality{
+    font-family:icomoon;
+    font-size: 50px;
+    color: #ffffff;
+    margin-left: 35px;
+    margin-right: 10px;
+    float: left;
+
+}
+.mod_service_tit{
+    text-align: left;
+    float: left;
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #ffffff;
+}
+.mod_help{
+    height: 282px;
+}
+.mod_help_list {
+    width: 190px;
+    padding: 20px 0 0 50px;
+    float: left;
+}
+.mod_help_list  dt {
+    height: 25px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.mod_help_list dd{
+    height: 30px;
+    font-size: 12px;
+}
+.mod_help_list dd a{
+    color: #ffffff;
+}
+.mod_copyright{
+    height: 43px;
+    border-top:1px solid ;
+    width: 100%;
+}
+.mod_copyright p {
+    margin-top: 20px;
+    margin-left: 64px;
+    color: #ffffff;
+}

@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+em,
+i{
+    font-style: normal;
+}
+li{
+    list-style: none;
+}
+img{
+    border: 0;
+    vertical-align: middle;
+}
+button{
+    cursor: pointer;
+}
+a {
+    color: #666;
+    text-decoration:none;
+}
+a:hover{
+    color: #575656;
+}
+
+button,
+input {
+    font-family: "Microsoft Sans Serif";
+    outline: none;
+}
+body {
+    background-color: #fff;
+    font: 12px/1.5 'Microsoft Sans Serif','Heiti SC';
+    color: #666;
+}
+.hide,
+.none {
+    display: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block ;
+    content:".";
+    height: 0;
+}
+.clearfix {
+    *zoom:1
+}

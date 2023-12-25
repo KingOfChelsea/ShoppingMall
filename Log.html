@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./twitter.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .w {
+            width: 1200px;
+            margin: auto;
+            background-color: #000f1d;
+        }
+        
+        body {
+            width: 100%;
+            height: auto;
+        }
+        
+        .form-password {
+            border: 1px solid rgb(211, 211, 211);
+            width: 400px;
+            height: 70px;
+            /* margin: auto; */
+            position: relative;
+            top: 400px;
+            left: 50%;
+            margin-left: -200px;
+        }
+        
+        label {
+            text-align: center;
+            line-height: 55px;
+            padding-left: 20px;
+        }
+        
+        .pwd {
+            width: 212px;
+            height: 48px;
+            position: absolute;
+            top: 5px;
+            left: 110px;
+            border-color: transparent;
+            border-bottom: 1px solid black;
+            outline: none;
+            padding-right: 50px;
+            /* margin-bottom: 20px; */
+        }
+        
+        .eyess {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 24px;
+            height: 30px;
+            display: inline-block;
+        }
+        
+        .header {
+            width: 400px;
+            height: 55px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 200px;
+            left: 50%;
+            margin-left: -160px;
+        }
+        
+        li {
+            float: left;
+            width: 72px;
+            height: 55px;
+            list-style: none;
+            margin-left: 50px;
+            position: relative;
+        }
+        
+        .frist {
+            float: left;
+            width: 72px;
+            width: 55px;
+            list-style: none;
+            margin-left: 0px;
+        }
+        
+        .icon {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+        }
+        
+        li .second {
+            position: absolute;
+            top: 10px;
+            left: -60px;
+        }
+        
+        .message {
+            font-size: 12px;
+            position: absolute;
+            top: 15px;
+            left: 420px;
+            width: 120px;
+            height: 40px;
+            background-image: url(./img/感叹号.png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            padding-left: 30px;
+            /* // background-position-y: -3px; */
+            background-position: left center;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        .number {
+            font-size: 8px;
+            position: absolute;
+            top: 30px;
+            left: 5px;
+            width: 60px;
+            height: 21px;
+            margin-top: 10px;
+        }
+        
+        .wrong {
+            color: red;
+            background-image: url(./img/错误.png);
+        }
+        
+        .corret {
+            color: green;
+            background-image: url(./img/正确.png);
+        }
+        
+        .user {
+            width: 400px;
+            height: 72px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 300px;
+            left: 50%;
+            margin-left: -200px;
+            border: 1px solid rgb(191, 187, 187);
+        }
+        
+        .userId {
+            width: 212px;
+            height: 48px;
+            position: absolute;
+            top: 5px;
+            left: 95px;
+            border-color: transparent;
+            border-bottom: 1px solid rgb(201, 199, 199);
+            outline: none;
+            padding-right: 50px;
+            /* margin-bottom: 20px; */
+        }
+        
+        .usermessage {
+            font-size: 12px;
+            position: absolute;
+            top: 15px;
+            left: 420px;
+            width: 120px;
+            height: 40px;
+            background-image: url(./img/感叹号.png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            padding-left: 30px;
+            /* // background-position-y: -3px; */
+            background-position: left center;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        .phone {
+            width: 400px;
+            height: 72px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 350px;
+            left: 50%;
+            margin-left: -200px;
+            border: 1px solid rgb(191, 187, 187);
+        }
+        
+        .phoneNumber {
+            width: 200px;
+            height: 48px;
+            position: absolute;
+            top: 5px;
+            left: 95px;
+            border-color: transparent;
+            border-bottom: 1px solid rgb(201, 199, 199);
+            outline: none;
+        }
+        
+        .phonePost {
+            width: 100px;
+            height: 52px;
+            float: right;
+            margin-top: 6px;
+            margin-left: 4px;
+            background-color: transparent;
+            border: 1px solid grey;
+        }
+        
+        .Check {
+            width: 400px;
+            height: 72px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 380px;
+            left: 50%;
+            margin-left: -200px;
+            border: 1px solid rgb(191, 187, 187);
+        }
+        
+        .CheckNumber {
+            width: 200px;
+            height: 48px;
+            position: absolute;
+            top: 5px;
+            left: 130px;
+            border-color: transparent;
+            border-bottom: 1px solid rgb(201, 199, 199);
+            outline: none;
+        }
+        
+        .sim-checkbox {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 400px;
+            left: 41.5%;
+            margin-top: 30px;
+            border: 2px solid black;
+        }
+        
+        .bgound {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 400px;
+            left: 41.5%;
+            margin-top: 30px;
+            background-image: url(./img/打勾.png);
+            background-size: 20px;
+            border: 3px solid black;
+        }
+        
+        .link {
+            position: relative;
+            top: 380px;
+            left: 45%;
+        }
+        
+        .Finsh {
+            background-color: red;
+            color: white;
+            position: relative;
+            top: 400px;
+            left: 50%;
+            margin-left: -200px;
+            width: 400px;
+            height: 54px;
+            line-height: 54px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .Finsh:hover {
+            background-color: rgb(177, 0, 0);
+        }
+        
+        .w {
+            background-image: url(./img/headerLOG.jpg);
+            width: 1500px;
+            height: 400px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0px -400px;
+            position: relative;
+        }
+        
+        .logo {
+            float: right;
+            margin-top: 45px;
+            font-size: 25px;
+            text-decoration: none;
+            color: red;
+            margin-right: 3px;
+        }
+        
+        .title {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 250px;
+        }
+        
+        .logo-title {
+            text-decoration: none;
+            float: left;
+            margin-top: 9px;
+            margin-left: 250px;
+            font-size: 30px;
+            color: red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .have-account {
+            float: right;
+            margin-top: 50px;
+            margin-right: 3px;
+            font-size: 25px;
+            text-decoration: none;
+            color: #5e5c5c;
+        }
+        
+        .sqcode {
+            background-image: url('./img/qrcode.png');
+            background-repeat: no-repeat;
+            background-size: 100px;
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 50%;
+            left: 50px;
+            z-index: 10;
+            /* margin-top: 50px; */
+        }
+        
+        .sqcode img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            left: -10px;
+        }
+        
+        .w p {
+            color: rgb(98, 94, 94);
+            font-size: x-large;
+            position: absolute;
+            top: 70%;
+            right: 2%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        
+        .title1 {
+            width: 500px;
+            position: absolute;
+            top: 80%;
+            right: 2%;
+        }
+        
+        .footer {
+            position: relative;
+            bottom: -500px;
+            height: 415px;
+            background-color: #f0ebeb;
+            background-position-x: 1;
+        }
+        /* .footer .w {
+    padding-top: 40px;
+    background-color: #00a4ff;
+} */
+        
+        .copyright {
+            float: left;
+        }
+        
+        .copyright img {
+            margin-top: 30px;
+        }
+        
+        .copyright p {
+            font-size: 12px;
+            color: #666;
+            margin: 20px 0 15px 0;
+        }
+        
+        .copyright .app {
+            width: 118px;
+            height: 33px;
+            border: 1px solid #00a4ff;
+            display: block;
+            line-height: 33px;
+            text-decoration: none;
+            text-align: center;
+            color: #00a4ff;
+        }
+        
+        .links {
+            float: right;
+        }
+        
+        .links dl {
+            float: left;
+            margin-right: 140px;
+        }
+        
+        .links dl dt {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+        
+        .links dl dd {
+            margin-top: 10px;
+        }
+        
+        .links dl dd a {
+            color: #333;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        
+        .c {
+            width: 1500px;
+            margin: auto;
+            background-color: #080808;
+        }
+        
+        .Find {
+            text-decoration: none;
+            color: white;
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="w ">
+        <img class="title" src="https://en.nongfuspring.com/assets/img/logo.ae828a1b.png" alt="">
+        <a href=" http://www.jd.com " class="logo">请登录</a>
+        <div class="logo-title">企业注册</div>
+        <div class="have-account" clstag="h|keycount|biguser|login">已有账号？ <a class="Find
+            " href="https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fb.jd.com%2F">请登录&gt;</a></div>
+        <img class="title1" src="https://www.nongfuspring.com/assets/img/footLogo.bbcb013a.jpg" alt="">
+    </div>
+    <div class="header">
+        <ul>
+            <li class="frist">
+                <svg t="1658797063787" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3218" width="200" height="200"><path d="M416.116778 121.565204 358.155952 66.84561 426.75564 0l220.289268 0L513.315556 121.565204 416.116778 121.565204zM496.194233 568.168615l64.977136-56.24488L617.759438 568.168615 582.410961 963.217398l-66.082967 60.782602L460.883889 963.217398 496.194233 568.168615zM533.563713 144.330081l132.280331-120.001787L628.360168 446.641543l-67.188799 65.320325-54.338274-65.320325L533.563713 144.330081z" p-id="3219"></path></svg>
+                <p class="number">验证手机号</p>
+            </li>
+            <li>
+                <svg t="1658797215629" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3373" width="200" height="200"><path d="M309.935797 885.784114 177.499744 1004.040223l32.482861-365.364754c0.770649-9.209257 1.502766-18.457047 3.891778-26.125006 2.427545-7.667959 4.932154-13.794619 9.132192-18.457047 0 0 8.554205-7.667959 22.657085-21.501111l41.037066-39.881093 50.747245 53.714245L309.935797 885.784114zM656.650842 901.158564l56.064724 61.420736-66.776747 61.420736L194.569622 1024.000036l138.17739-122.841472L656.650842 901.158564zM690.636469 552.671026c-16.954281 16.877216-30.363576 21.501111-65.659306 21.501111L360.95277 574.172137 305.042175 514.292699l43.695806-44.504987c5.625739-6.126661 12.869841-10.750555 20.268072-13.833152 7.398232-3.044064 13.409295-4.585362 21.077254-4.585362l24.583707 0 265.604224 0 55.872062 59.91797L690.636469 552.671026zM382.877738 122.841472 326.967143 62.923502 392.048462 0l313.191808 0c30.671835 0 45.198572 7.667959 62.26845 27.627771l20.576332 24.583707-78.259419 70.629993L382.877738 122.841472zM725.431277 142.762752l79.762185-70.629993 27.242447 30.710368c3.352324 3.082597 7.089972 10.750555 11.097348 21.501111 1.926623 4.623895 2.35048 9.24779 2.735804 13.833152 0.539454 6.126661-0.038532 16.877216-0.385325 30.710368l-21.578176 227.187364c-2.19635 27.666304-7.359699 38.416859-27.126849 58.338139l-42.578365 39.919625-55.756465-58.338139L725.431277 142.762752z" p-id="3374"></path></svg>
+                <p class="number">注册进行</p>
+                <div class="second">&bull;&bull;&bull;&bull;&bull;&bull;&bull; &gt;</div>
+            </li>
+            <li>
+                <svg t="1658797247167" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3528" width="200" height="200"><path d="M606.286201 901.158566l63.000567 70.629993-32.636991 30.710368c-17.069878 15.297385-36.490237 21.501111-71.785967 21.501111L265.505153 1024.000039 209.594558 964.120601l77.373173-62.962034L606.286201 901.158566zM645.242515 451.330666l58.993191 59.91797L634.491959 574.133606 316.714788 574.133606l-60.804217-62.923502 71.51624-59.91797L645.242515 451.292134zM355.516972 122.841472l-57.413361-59.91797L366.267528 0l302.441253 0c13.833152 0 23.158007 1.502766 26.240603 1.502766 10.904685 1.541298 27.203914 12.291854 40.805872 27.704836l20.576332 24.545175-81.457614 69.088695L355.516972 122.841472zM652.987538 592.55212l69.589617-64.4648 27.011252 27.627772c15.297385 16.877216 20.961656 29.16907 22.464422 46.084818 0.693584 7.667959 1.348636 15.297385 0.462389 23.003877l-22.002033 239.517751c-2.19635 27.627772-8.7854 39.919625-30.093849 59.879438l-35.681055 30.710368-57.952815-66.044631L652.987538 592.55212zM693.215423 139.680156l80.031913-67.547397 20.306605 21.501111c11.983594 13.833152 19.304761 27.666304 20.653397 43.002222 0.539454 6.126661-0.038532 16.877216-1.541298 35.29573l-20.422202 222.602003c-2.04222 29.16907-7.244102 39.919625-24.198383 56.796841l-45.352702 42.963689-57.336296-58.33814L693.215423 139.680156z" p-id="3529"></path></svg>
+                <p class="number">完成注册</p>
+                <div class="second">&bull;&bull;&bull;&bull;&bull;&bull;&bull; &gt;</div>
+
+            </li>
+        </ul>
+
+    </div>
+    <div class="sqcode" id="sq">
+        <img id="img" src="./img/关闭.png" alt="">
+    </div>
+    <script>
+        var divimg = document.getElementById('img');
+        var div = document.getElementById('sq');
+        divimg.onclick = function() {
+            div.style.display = 'none';
+        }
+    </script>
+
+    <div class="user">
+        <label for="">用 户 名 </label>
+        <input type="text" id="userId" class="userId" value="输入用户名" name="uname">
+        <p class="usermessage" id="usermessage">请输入用户名</p>
+    </div>
+    <!-- 用户名 -->
+
+    <!-- 用户名结束 -->
+
+    <!-- 验证码 -->
+    <div class="phone">
+        <label for="">中 国+86 </label>
+        <input type="text" id="phoneNumber" class="phoneNumber" value="输入电话号码">
+        <button type="button" class="phonePost" id="phonePost">获取验证码</button>
+        <p class="message" id="phonemessage">请输入你的电话号码</p>
+    </div>
+    <div class="Check">
+        <label for="">输 入 验 证 码</label>
+        <input type="text" id="Checknumber" class="CheckNumber" value="输入验证码">
+        <p class="message" id="Checkmessage">请输入收到的验证码</p>
+    </div>
+
+    <script>
+        var phone = document.getElementsByClassName('phone');
+        var phoneNumber = document.getElementById('phoneNumber');
+        var phonePost = document.getElementById('phonePost');
+        var phonemessage = document.getElementById('phonemessage');
+        var CheckNumber = document.getElementById('Checknumber');
+        var Checkmessage = document.getElementById('Checkmessage');
+        let idpassword = ''
+        phoneNumber.onfocus = function() {
+            if (this.value === '输入电话号码') {
+                this.value = '';
+            }
+            this.style.color = '#333'
+        }
+        phoneNumber.onblur = function() {
+            if (this.value.length != 11) {
+                phonemessage.className = 'message wrong';
+                phonemessage.innerHTML = 'error';
+            } else {
+                this.style.color = '#999'
+                phonemessage.innerHTML = '正确'
+                phonemessage.className = 'message corret'
+            }
+
+            phonePost.onclick = function() {
+                alert("请接受验证码");
+                // 生成随机码
+                var time = 60;
+                this.disabled = true;
+
+                function getRandomInt(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+                }
+                idpassword = getRandomInt(1000, 10000);
+
+                if (phoneNumber.value.length == 11) {
+                    alert('验证码是' + idpassword);
+                    CheckNumber.onblur = function() {
+                        if (CheckNumber.value == idpassword) {
+                            Checkmessage.className = 'message corret';
+                            Checkmessage.innerHTML = '正确';
+                        } else {
+                            Checkmessage.className = 'message wrong';
+                            Checkmessage.innerHTML = '错误';
+                        }
+                    }
+                } else {
+                    alert("电话号码错误")
+                }
+                var timer = setInterval(function() {
+                    if (time == 0) {
+                        clearInterval(timer);
+                        phonePost.disabled = false;
+                        phonePost.innerHTML = '获取验证码';
+                        time = 60;
+                    } else {
+                        phonePost.innerHTML = '还剩余' + time + '秒';
+                        time--;
+                    }
+                }, 1000);
+            }
+        }
+
+
+        CheckNumber.onfocus = function() {
+            if (this.value === '输入验证码') {
+                this.value = '';
+            }
+            this.style.color = '#333'
+        }
+    </script>
+    <!-- 验证码结束 -->
+
+
+    <!-- 密码 -->
+    <div class="form-password ">
+        <label for=" ">设 置 密 码</label>
+        <input type="text" id="pwd" class="pwd" value="请输入8位数字以上的密码">
+
+        <img class="eyess" id="eye" src="./img/unSee.png " alt=" ">
+        <p class="message" id="message">请输入8~16位的密码</p>
+    </div>
+    <!--  密码结束-->
+
+
+    <script>
+        // 获取元素
+        var eye = document.getElementById('eye');
+        var pwd = document.getElementById('pwd');
+        var message = document.getElementById('message')
+        var flag = 0;
+        eye.onclick = function() {
+            // 获取元素
+            if (flag == 0) {
+                pwd.type = 'password';
+                flag = 1;
+                this.src = './img/See.png'
+            } else {
+                pwd.type = 'text';
+                flag = 0;
+                this.src = './img/unSee.png'
+            }
+        }
+        pwd.onfocus = function() {
+            console.log(this.value)
+            if (this.value === '请输入8位数字以上的密码') {
+                this.value = '';
+            }
+            // this.style.color = 'black'
+            this.style.color = '#333'
+
+        }
+
+        pwd.onblur = function() {
+            // 等于空就会赋值
+            if (this.value.length < 8 || this.value.length > 16) {
+                // this.value = '请输入8位数字以上的密码';
+                message.className = 'message wrong';
+                message.innerHTML = '你输入的位数不对';
+            } else {
+                this.style.color = '#999'
+                message.className = 'message corret'
+                message.innerHTML = '正确'
+            }
+        }
+    </script>
+    <div class="sim-checkbox" id="sim-checkbox"></div>
+
+    <script>
+        var flag = 0;
+        var simcheckbox = document.getElementById('sim-checkbox')
+        simcheckbox.onclick = function() {
+            if (flag == 0) {
+                this.className = 'bgound'
+                flag = 1;
+            } else {
+                this.className = 'sim-checkbox'
+                flag = 0;
+            }
+        }
+    </script>
+    <a class="link" target="_blank" href="https://help.jd.com/user/issue/945-4099.html">我已阅读相关条例</a>
+    <div class="Finsh" id="finsh">
+        注册
+    </div>
+
+    <script>
+        var user = document.getElementById('user');
+        var userId = document.getElementById('userId');
+        var usermessage = document.getElementById('usermessage');
+        let userValue = userId;
+        userId.onfocus = function() {
+            if (this.value === '输入用户名') {
+                this.value = '';
+            }
+            this.style.color = '#333'
+        }
+
+        userId.onblur = function() {
+            if (this.value.length < 3 || this.value.length > 10) {
+                usermessage.className = 'message wrong'
+                usermessage.innerHTML = '错误'
+            } else {
+                this.style.color = '#999'
+                usermessage.innerHTML = '正确'
+                usermessage.className = 'message corret'
+
+            }
+        }
+
+        var finsh = document.getElementById('finsh');
+        finsh.onclick = function() {
+            if (userValue.length == ' ') {
+                alert('有地方没有填写')
+            } else {
+                alert("成功注册")
+                var s = document.getElementById('userId');
+                location.href = "index.html?" + encodeURI(s.value);
+            }
+        }
+    </script>
+    <div class="footer  ">
+        <div class="c w ">
+            <div class="copyright ">
+                <img src="https://www.nongfuspring.com/assets/img/logo.ae828a1b.png">
+                <p>农夫山泉于普及中国最好的教育它与中国一流大学和机构合作提供就业机会。<br> © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                <a href="# " class="app ">下载app</a>
+            </div>
+            <div class="links ">
+                <dl>
+                    <dt>关于农夫山泉公司</dt>
+
+                    <dd>
+                        <a href="# ">管理团队</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">工作机会</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">客户服务</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">帮助</a>
+                    </dd>
+
+                </dl>
+                <dl>
+                    <dt>了解产品</dt>
+                    <dd>
+                        <a href="# ">关于</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">农夫山泉卡其色</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">农夫山泉茶派</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">农夫山泉</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">帮助</a>
+                    </dd>
+
+                </dl>
+                <dl>
+                    <dt>加入农夫山泉</dt>
+                    <dd>
+                        <a href="# ">关于</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">管理团队</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">工作机会</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">客户服务</a>
+                    </dd>
+                    <dd>
+                        <a href="# ">帮助</a>
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
